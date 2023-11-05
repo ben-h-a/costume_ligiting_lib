@@ -40,14 +40,12 @@
         <div class="divider"></div>
         <div id="animation" class="control-section">
             <h2 class="sticky-title">Animation</h2>
-            <h4>LED power</h4>
-            <label class="switch">
-                <input type="checkbox" onchange="update_input(this)" id="leds-on">
-                <span class="slider"></span>
-            </label>
-            <h4>Brightness</h4>
-            <input class="range-slider" type="range" min="0" max="100" value="50" onchange="update_input(this)"
-                id="brightness">
+            <h4>Select animation</h4>
+            <select id="animation" name="animation select" onchange="update_input(this)">
+                <option value="static">static</option>
+                <option value="fade-between">fade between</option>
+                <option value="pulse">pulse</option>
+            </select>
         </div>
     </div>
 </body>
