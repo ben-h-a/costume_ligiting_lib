@@ -11,6 +11,8 @@
 DNSServer dnsServer;
 AsyncWebServer server(WEBSERVER_PORT);
 
-void init_server_handler(AsyncWebHandler *web_handler, const String &ssid, const String &password);
+void init_server_handler(AsyncWebHandler *web_handler,
+                         const String &ssid,
+                         const String &password);
 void server_handle_request();
 #endif //__WEBSERVER_H__

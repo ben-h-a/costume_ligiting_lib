@@ -1,7 +1,9 @@
 
 #include "webserver.h"
 
-void init_server_handler(AsyncWebHandler *web_handler, const String &ssid, const String &password)
+void init_server_handler(AsyncWebHandler *web_handler,
+                         const String &ssid,
+                         const String &password)
 {
     WiFi.softAP(ssid, password);
     dnsServer.start(DNS_PORT, "*", WiFi.softAPIP());

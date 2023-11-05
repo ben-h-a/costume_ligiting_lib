@@ -23,12 +23,13 @@ function get_query_update(input, query_data) {
 
 function body_load() {
     const inputElements = document.querySelectorAll('input');
-
+    const select_elements = document.querySelectorAll('select');
+    const allInputElements = [...inputElements, ...select_elements]
     // Create an array to store key-value pairs
     const data = [];
 
     // Iterate over input elements and collect their values
-    inputElements.forEach(function (input) {
+    allInputElements.forEach(function (input) {
         get_query_update(input, data);
     });
     // Create a query string by joining the key-value pairs
